@@ -108,4 +108,44 @@ This create a placeholder for product item, and is used exclusively on home page
       {%- endif -%}
     </div>
   </div>
+
+
+  
+  <div class="product-item__fields">
+    <div class="fields">
+      <h3>Bike Features</h3>
+      <!-- <ul>
+        {%- if product.metafields.feature.speed != blank -%}<li class="speed">9-11 speed Shimano</li>{%- endif -%}
+        {%- if product.metafields.feature.power != blank -%}<li class="power">750 W-1000W Hub or Mid Drive</li>{%- endif -%}
+        {%- if product.metafields.feature.distance != blank -%}<li class="distance">Up to 200 mi</li>{%- endif -%}
+        {%- if product.metafields.feature.battery != blank -%}<li class="battery">Up to 2027Wh</li>{%- endif -%}
+        {%- if product.metafields.feature.size != blank -%}<li class="size">5'2 and up</li>{%- endif -%}
+        {%- if product.metafields.feature.weight != blank -%}<li class="weight">265-380 lb. Capacity</li>{%- endif -%}
+        {%- if product.metafields.feature.torque != blank -%}<li class="torque">85-160Nm Torque</li>{%- endif -%}
+        {%- if product.metafields.feature.tires != blank -%}<li class="tires">26x4", 26x4.8", 27.5x3", 24x4" Tires</li>{%- endif -%}
+        {%- if product.metafields.feature.options != blank -%}<li class="options">Cadence and Torque Sensor Options</li>{%- endif -%}
+        {%- if product.metafields.feature.throttle != blank -%}<li class="throttle">On-demand Throttle</li>{%- endif -%}
+      </ul> -->
+      <ul>
+        <li class="speed">9-11 speed Shimano</li>
+        <li class="power">750 W-1000W Hub or Mid Drive</li>
+        <li class="distance">Up to 200 mi</li>
+        <li class="battery">Up to 2027Wh</li>
+        <li class="size">5'2 and up</li>
+        <li class="weight">265-380 lb. Capacity</li>
+        <li class="torque">85-160Nm Torque</li>
+        <li class="tires">26x4", 26x4.8", 27.5x3", 24x4" Tires</li>
+        <li class="options">Cadence and Torque Sensor Options</li>
+        <li class="throttle">On-demand Throttle</li>
+      </ul>
+    </div>
+
+    <form method="post" action="/cart/add">
+      <a href="/{{ product.handle }}" class="view-more">View More</a>
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+      <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
+      <button type="submit" class="form__submit form__submit--tight button button--primary">Add To Cart</button>
+    </form>
+  </div>
+
 </div>
